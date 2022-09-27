@@ -12,10 +12,20 @@ p {
   =================*/
 /* 画面幅が768px以上のとき */
 @media screen and (min-width: 768px) {
+  /* PC用カルーセル設定 */
+  .carousel {
+    width: 885px;
+    margin-left: 20px;
+  }
+
+  .carouselImg {
+    width: 885px;
+  }
+
   /* 横幅設定 */
   body {
     max-width: 1000px;
-    min-width: 960px;
+    min-width: 900px; /*← bodyの横幅は最小900px*/
     margin: 0 auto 0 auto;
   }
 
@@ -749,6 +759,16 @@ p {
   =====================*/
 /* 画面幅が767px以下のとき */
 @media screen and (max-width: 767px) {
+  /* スマホ用カルーセル設定 */
+  .carousel {
+    width: 375px;
+    margin: 0 auto 0 auto;
+  }
+
+  .carouselImg {
+    width: 375px;
+  }
+
   body {
     min-width: 375px;
     margin: 0;
@@ -761,8 +781,12 @@ p {
 
   /* ハンバーガーメニューのアイコン画像 */
   #menu-sp {
-    float: right;
-    padding: 0;
+    /* float: right; */
+    /* padding: 0; */
+
+    position: absolute;
+    top: 0px;
+    right: 0px;
   }
 
   /* スマホ用ナビゲーションの表示切替 */
